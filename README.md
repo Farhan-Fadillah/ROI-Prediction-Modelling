@@ -1,2 +1,57 @@
-# ROI-Prediction-Modelling
-Built a Retail ROI Optimization System using Random Forest to predict profitability with 97% accuracy. By analyzing lead times and margins, this ML solution identifies 'Star Products' vs. 'Dead Stock,' enabling data-driven restocking to optimize inventory efficiency and maximize cash flow.
+# Retail Intelligence: Maximizing ROI through Predictive Analytics
+
+In the fast-paced and highly competitive retail industry, profit margins are often razor-thin. The single biggest challenge facing every retailer—from local grocery stores to e-commerce giants—is Inventory Management. Holding too much stock (overstock) ties up capital and inflates storage costs, while running out of stock (understock) during high demand leads to lost revenue and customer dissatisfaction.
+
+Many retailers still rely on intuition or simple manual calculations to decide which products to keep or restock. This approach often fails to capture complex dynamics such as sales velocity, supply chain risks (lead time), and the impact of returns (refunds). Consequently, business decisions are frequently suboptimal, resulting in accumulating Dead Stock or costly Lost Sales.
+
+To bridge this gap, this project introduces the Retail ROI Optimization System, a Machine Learning-based solution designed to accurately predict product profitability (ROI). The system goes beyond simply identifying "what sells" to analyzing overall inventory health, providing strategic recommendations on whether a product should be immediately restocked or discontinued.
+
+## Project Significance and Benefits
+•	Financial Health Improvement: Directly improves Cash Flow by prioritizing capital investment in "Star" products (High ROI) and preventing capital waste on "Dead" products (Low ROI).
+•	Inventory Efficiency: Reduces operational warehousing costs (holding costs) by detecting overstock risks early through stock ratio analysis.
+•	Supply Chain Risk Mitigation: Integrates external risk factors such as lead time (delivery wait times) into predictions, ensuring the company avoids ordering goods that will arrive too late after a trend has passed.
+•	Data-Driven Decision Making: Shifts the decision-making culture from "gut feeling" to objective data-driven insights, enabling procurement teams to operate with greater precision.
+•	Scalability: The model is designed to handle thousands of SKUs simultaneously, making it a scalable solution that grows with the business.
+
+## Why This Project Matters
+Retail success is no longer determined solely by who has the best product, but by who has the most efficient operations. This project addresses that challenge by leveraging Artificial Intelligence to transform raw transaction data into actionable insights. With the ability to predict ROI with high accuracy (97%), the system acts as a "Financial Guardian," protecting company margins from inefficiency and market risks.
+Dataset Description
+The dataset consists of retail operational data that has undergone deep Feature Engineering to capture crucial business dimensions. Key features include:
+•	restock_lead_days: The time required for suppliers to deliver goods (The most influential feature).
+•	unit_margin_ratio: The net profit percentage per unit.
+•	stock_cover_ratio: The ratio of available stock compared to daily sales velocity.
+•	sell_through_rate: How quickly a percentage of stock is sold out within a specific period.
+•	lead_time_risk: An interaction feature detecting high-risk scenarios (long lead times combined with demand spikes).
+•	refund_rate: The percentage of items returned by customers (an indicator of quality/satisfaction).
+•	Target Variable (roi_class): A binary classification where 1 represents High ROI Products (Invest) and 0 represents Low ROI Products (Inefficient).
+
+## Machine Learning Model: Random Forest Classifier
+
+### Why Random Forest?
+•	Handling Non-Linearity: Relationships in retail data are rarely linear. For instance, a low price does not always guarantee high sales, and high sales do not always guarantee profit. Random Forest excels at capturing these non-linear patterns and complex feature interactions.
+•	Robust to Imbalance: Retail datasets are often imbalanced (more average products than best-sellers). By utilizing class_weight='balanced', the model handles this disparity without biasing towards the majority class.
+•	Feature Importance: The model provides transparency by highlighting which variables most influence decisions (in this case: Lead Time and Margin), which is critical for strategic planning.
+•	Ensemble Power: By aggregating hundreds of decision trees, the model is highly resistant to overfitting and provides stable predictions on new data.
+
+## Project Flow Overview
+### Step-by-step Flow:
+1.	Data Ingestion & Preprocessing:
+o	Loading raw transaction data (sales, stock, costs, prices).
+o	Cleaning data and handling missing values.
+2.	Advanced Feature Engineering:
+o	Creating meaningful business metrics such as sell_through_rate (sales speed), stock_cover_ratio (stock durability), and real_net_profit (accounting for refund and holding costs).
+o	Defining the target label: ROI Class 1 (High) vs. Class 0 (Low).
+3.	Model Training & Tuning:
+o	Splitting data into Training and Testing sets.
+o	Training the Random Forest Classifier using GridSearchCV to find the best parameters (hyperparameter tuning) to maximize performance.
+4.	Evaluation:
+o	Measuring model performance using Confusion Matrix and ROC-AUC Score.
+o	Current results show 97% Accuracy and 0.95 ROC-AUC, indicating a highly reliable model.
+5.	Inference & Business Recommendation:
+o	The system ingests new product data or weekly ongoing data.
+o	The model predicts the ROI class and a probability score.
+o	Automated Output: The system generates actionable labels:
+	🔥 STAR PRODUCT: Priority Restock.
+	⚠️ DEAD STOCK: Recommendation for Discount/Clearance.
+	✅ POTENTIAL: Monitor Margin.
+
