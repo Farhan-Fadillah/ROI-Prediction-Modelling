@@ -60,4 +60,25 @@ The dataset consists of retail operational data that has undergone deep Feature 
      - 🔥 STAR PRODUCT: Priority Restock.
      - ⚠️ DEAD STOCK: Recommendation for Discount/Clearance.
      - ✅ POTENTIAL: Monitor Margin.
+    
+
+## Streamlit App Features
+Features:
+- Data Input = Sidebar file uploader for CSV files (test_tbl_data) with schema validation and a historical data template display.
+- ROI Prediction = Random Forest Classifier model that predicts product profitability (High ROI vs. Low ROI) based on inventory metrics.
+- Smart Recommendations = Logic-based actionable insights (e.g., "Restock Segera", "Stop Order") generated from prediction confidence scores.
+- Automated Feature Engineering = Automatically calculates advanced retail metrics like Sell-Through Rate, Stock Cover Ratio, and Margin from raw input data.
+- Visualization = Interactive dashboard displaying KPI metrics, recommendation distribution charts, and feature importance analysis.
+- Model Training = Automated background training process using cached resources to ensure the model is ready immediately upon launch.
+- Export Capability = Download button allowing users to save the final analysis, including predictions and action plans, as a CSV file.
+
+<img width="1920" height="915" alt="image" src="https://github.com/user-attachments/assets/9f17e2e6-9041-4f1c-996d-de04255f7381" />
+
+<img width="1914" height="939" alt="image" src="https://github.com/user-attachments/assets/57fb34ae-bd31-4a22-ac1b-a2d87edc0c23" />
+
+<img width="1918" height="955" alt="image" src="https://github.com/user-attachments/assets/5a41cc32-4065-42b0-a2e7-a81b45b71a88" />
+
+
+
+
 
