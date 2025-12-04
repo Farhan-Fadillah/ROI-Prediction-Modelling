@@ -1,6 +1,6 @@
 # Retail Intelligence: Maximizing ROI through Predictive Analytics
 
-In the fast-paced and highly competitive retail industry, profit margins are often razor-thin. The single biggest challenge facing every retailer—from local grocery stores to e-commerce giants—is Inventory Management. Holding too much stock (overstock) ties up capital and inflates storage costs, while running out of stock (understock) during high demand leads to lost revenue and customer dissatisfaction.
+In the fast-paced and highly competitive retail industry, profit margins are often razor-thin. The single biggest challenge facing every retailer from local grocery stores to e-commerce giants is Inventory Management. Holding too much stock (overstock) ties up capital and inflates storage costs, while running out of stock (understock) during high demand leads to lost revenue and customer dissatisfaction.
 
 <img width="855" height="441" alt="image" src="https://github.com/user-attachments/assets/816ca270-68a8-4d1e-9ced-430e5644d952" />
 
