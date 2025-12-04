@@ -2,9 +2,11 @@
 
 In the fast-paced and highly competitive retail industry, profit margins are often razor-thin. The single biggest challenge facing every retailer—from local grocery stores to e-commerce giants—is Inventory Management. Holding too much stock (overstock) ties up capital and inflates storage costs, while running out of stock (understock) during high demand leads to lost revenue and customer dissatisfaction.
 
-<img width="546" height="445" alt="image" src="https://github.com/user-attachments/assets/9d76e49d-6cbe-4539-9742-bef0acedfc37" />
+<img width="855" height="441" alt="image" src="https://github.com/user-attachments/assets/816ca270-68a8-4d1e-9ced-430e5644d952" />
 
 Many retailers still rely on intuition or simple manual calculations to decide which products to keep or restock. This approach often fails to capture complex dynamics such as sales velocity, supply chain risks (lead time), and the impact of returns (refunds). Consequently, business decisions are frequently suboptimal, resulting in accumulating Dead Stock or costly Lost Sales.
+
+<img width="859" height="588" alt="image" src="https://github.com/user-attachments/assets/0e35d803-b636-4315-a0b1-38db385380b0" />
 
 To bridge this gap, this project introduces the Retail ROI Optimization System, a Machine Learning-based solution designed to accurately predict product profitability (ROI). The system goes beyond simply identifying "what sells" to analyzing overall inventory health, providing strategic recommendations on whether a product should be immediately restocked or discontinued.
 
@@ -28,6 +30,8 @@ The dataset consists of retail operational data that has undergone deep Feature 
 - Target Variable (roi_class): A binary classification where 1 represents High ROI Products (Invest) and 0 represents Low ROI Products (Inefficient).
 
 ## Machine Learning Model: Random Forest Classifier
+
+<img width="879" height="437" alt="image" src="https://github.com/user-attachments/assets/403e33e8-19a5-4638-89d7-6358dba5c806" />
 
 ### Why Random Forest?
 - Handling Non-Linearity: Relationships in retail data are rarely linear. For instance, a low price does not always guarantee high sales, and high sales do not always guarantee profit. Random Forest excels at capturing these non-linear patterns and complex feature interactions.
